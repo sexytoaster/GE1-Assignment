@@ -20,14 +20,10 @@ public class audioVisualizer1 : MonoBehaviour
         float theta = (Mathf.PI * 2.0f) / (float)audioAnalyzer1.bands.Length;
         for (int i = 0; i < audioAnalyzer1.bands.Length; i++)
         {
-            Vector3 p = new Vector3(
-                Mathf.Cos(theta * i) * radius
-                , 0
-                , Mathf.Sin(theta * i) * radius
-                );
+            Vector3 p = new Vector3(Mathf.Cos(theta * i) * radius, Mathf.Sin(theta * i) * radius, 0);
             p = transform.TransformPoint(p);
             Quaternion q = Quaternion.AngleAxis(theta * i * Mathf.Rad2Deg, Vector3.up);
-            q = transform.rotation * q;
+            //q = transform.rotation * q;
 
             GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
             cube.transform.SetPositionAndRotation(p, q);
