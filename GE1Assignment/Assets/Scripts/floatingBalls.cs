@@ -24,7 +24,7 @@ public class floatingBalls : MonoBehaviour
     void Jump()
     {
         
-            float y = (AudioPeer.audioBandBuffer[band] * scaleMulti);
+            float y = (AudioPeer.audioBand[band] * scaleMulti);
             Vector3 pos = new Vector3(xOffset, y, zOffset);
             transform.position = pos + cameraPosition.position;
        
