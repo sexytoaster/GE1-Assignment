@@ -14,9 +14,8 @@ public class AudioPeer : MonoBehaviour
     public static float[] spectrum;
     public static float[] bands = new float[8];
     public static float[] bandBuffer = new float[8];
-    float[] bufferDecrease = new float[8];
-
-    float[] bandHighest = new float[8];
+    readonly float[] bufferDecrease = new float[8];
+    readonly float[] bandHighest = new float[8];
     public static float[] audioBand = new float[8];
     public static float[] audioBandBuffer = new float[8];
     // Start is called before the first frame update
@@ -38,6 +37,7 @@ public class AudioPeer : MonoBehaviour
     void CreateAudioBands()
     {
         //we use this to create values between 0 and 1 for use later
+        //useful for when we are changing colours with our sound output or transforming by a multiplier
         for(int i = 0; i < 8; i++)
         {
             if(bands[i] > bandHighest[i])
@@ -57,6 +57,7 @@ public class AudioPeer : MonoBehaviour
 
     void BandBuffer()
     {
+        //this creates a buffer for our visualization that makes it so when sounds stop the shapes dont immediately return to their original size. 
         for(int i = 0; i < 8; ++i)
         {
             if(bands[i] > bandBuffer[i])
@@ -74,42 +75,7 @@ public class AudioPeer : MonoBehaviour
     }
     void MakeBands()
     {
-        /*
-         * 22050/512 = 43 hz per sample
-         *  /*
-         * 20-60 - Subbase
-         * 60-250 - Bass
-         * 250-500 - Low midrange
-         * 500 - 2Khz - Midrange
-         * 2Khz - 4Khz - Upper midrange
-         * 4Khz - 6Khz - Presence
-         * 6Khz - 20Khz - Brilliance
-         *
-         *0-2 = 86hz
-         *1-4 = 172hz - 87 - 258
-         *2-8 
-         *3-16
-         *4-32
-         *5-64
-         *6-128
-         *7-256
-         * = 510
-         */
-        /*for (int i = 0; i < bands.Length; i++)
-        {
-            int start = (int)Mathf.Pow(2, i) - 1;
-            int width = (int)Mathf.Pow(2, i);
-            int end = start + width;
-            float average = 0;
-            for (int j = start; j < end; j++)
-            {
-                average += spectrum[j] * (j + 1);
-            }
-            average /= (float)width;
-            bands[i] = average;
-            //Debug.Log(i + "\t" + start + "\t" + end + "\t" + start * binWidth + "\t" + (end * binWidth));
-        }*/
-
+        //this splits our spectrum into 8 bands that we can work with
         int count = 0;
 
         for (int i = 0; i < bands.Length; i++)

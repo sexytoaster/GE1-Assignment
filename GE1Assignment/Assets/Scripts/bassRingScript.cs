@@ -21,7 +21,7 @@ public class bassRingScript : MonoBehaviour
         if (useBuffer)
         {
             transform.localScale = new Vector3(transform.localScale.x, (AudioPeer.audioBandBuffer[band] * scaleMult) + startingScale, (AudioPeer.audioBandBuffer[band] * scaleMult) + startingScale);
-            Color color = new Color(AudioPeer.audioBandBuffer[band], AudioPeer.audioBandBuffer[band], AudioPeer.audioBandBuffer[band]);
+            Color color = new Color(AudioPeer.audioBandBuffer[band] , AudioPeer.audioBandBuffer[band] + .5f, AudioPeer.audioBandBuffer[band] + .5f);
             material.SetColor("_EmissionColor", color);
         }
         if (!useBuffer)
