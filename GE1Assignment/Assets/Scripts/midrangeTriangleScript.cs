@@ -7,7 +7,7 @@ public class midrangeTriangleScript : MonoBehaviour
     public GameObject triangle;
     public GameObject mainCamera;
     public Vector3 lastPosition = new Vector3(0, 0, 0);
-    public Vector3 offsetVector = new Vector3(5, 0, 0);
+    public Vector3 offsetVector = new Vector3(10, 0, 0);
     float x;
     // Start is called before the first frame update
     void Start()

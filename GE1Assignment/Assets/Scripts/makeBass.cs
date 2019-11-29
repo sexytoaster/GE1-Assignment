@@ -10,7 +10,7 @@ public class makeBass : MonoBehaviour
     public GameObject ring;
     public GameObject mainCamera;
     public Vector3 lastPosition = new Vector3(0, 0, 0);
-    public Vector3 offsetVector = new Vector3(15, 0, 0);
+    public Vector3 offsetVector = new Vector3(30, 0, 0);
     // Start is called before the first frame update
     void Start()
     {
