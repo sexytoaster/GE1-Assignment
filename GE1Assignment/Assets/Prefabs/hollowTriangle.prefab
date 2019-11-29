@@ -1460,6 +1460,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   band: 3
-  startingScale: 1
-  scaleMult: 1
+  startingScale: 3
+  scaleMult: 2
   useBuffer: 1

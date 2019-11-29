@@ -21,7 +21,7 @@ public class makeBass : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(mainCamera.transform.position, lastPosition);
-        if (distance < 200)
+        if (distance < 5000)
         {
             GameObject ringInstance = GameObject.Instantiate(ring, lastPosition + offsetVector, Quaternion.identity);
             lastPosition = ringInstance.transform.position;

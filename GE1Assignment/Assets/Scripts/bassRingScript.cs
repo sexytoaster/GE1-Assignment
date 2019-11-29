@@ -15,9 +15,9 @@ public class bassRingScript : MonoBehaviour
     {
         material = GetComponent<MeshRenderer>().materials[0];
         Color colourOriginal = material.GetColor("_EmissionColor");
-        r = (1 - colourOriginal.r) / 2;
-        g = (1 - colourOriginal.g) / 2;
-        b = (1 - colourOriginal.b) / 2;
+        r = (1 - colourOriginal.r);
+        g = (1 - colourOriginal.g);
+        b = (1 - colourOriginal.b);
 
     }
 

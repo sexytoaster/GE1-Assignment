@@ -26493,6 +26493,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   band: 1
-  startingScale: 1
-  scaleMult: 2
+  startingScale: 3
+  scaleMult: 3
   useBuffer: 1
