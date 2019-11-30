@@ -6,6 +6,7 @@ public class makeBands45 : MonoBehaviour
 {
     public GameObject band4;
     public GameObject band5;
+    public GameObject band6;
     public float xOffset;
     public float zOffset;
     public int band;
@@ -14,11 +15,13 @@ public class makeBands45 : MonoBehaviour
     {
         Vector3 posBand4 = new Vector3(xOffset, 0, zOffset);
         Vector3 posBand5 = new Vector3(xOffset + 20, 0, zOffset + 10);
+        Vector3 posBand6 = new Vector3(20, -10, 0);
         for (int i = 0; i < 2; i++)
         {
             
             GameObject band4Instance = GameObject.Instantiate(band4, posBand4, Quaternion.identity);
             GameObject band5Instance = GameObject.Instantiate(band5, posBand5, Quaternion.identity);
+            
             band4Instance.transform.parent = Camera.main.transform;
             band5Instance.transform.parent = Camera.main.transform;
             if (i == 1)
@@ -27,6 +30,8 @@ public class makeBands45 : MonoBehaviour
                 band5Instance.GetComponentInChildren<floatingBalls>().zOffset = posBand4.z * -1;
             }
         }
+        GameObject band6Instance = GameObject.Instantiate(band6, posBand6, Quaternion.identity);
+        band6Instance.transform.parent = Camera.main.transform;
     }
 
     // Update is called once per frame

@@ -7,7 +7,6 @@ public class orbitOrbs : MonoBehaviour
     public float yOrbit;
     public float zOrbit;
     public float xOffset;
-    public Transform cameraPosition;
     public int band;
     public float rotationSpeed;
     public bool rotateClockwise;
@@ -34,14 +33,14 @@ public class orbitOrbs : MonoBehaviour
             float y = (-Mathf.Cos(speed) * yOrbit) + (AudioPeer.audioBandBuffer[band] * scaleMulti);
             float z = Mathf.Sin(speed) * zOrbit; // + (AudioPeer.audioBandBuffer[band] * scaleMulti);
             Vector3 pos = new Vector3(xOffset, y, z);
-            transform.position = pos + cameraPosition.position;
+            transform.position = pos + Camera.main.transform.position;
         }
         else
         {
             float y = Mathf.Cos(speed) * yOrbit + (AudioPeer.audioBandBuffer[band] * scaleMulti);
             float z = Mathf.Sin(speed) * zOrbit; // + (AudioPeer.audioBandBuffer[band] * scaleMulti);
             Vector3 pos = new Vector3(xOffset, y, z);
-            transform.position = pos + cameraPosition.position;
+            transform.position = pos + Camera.main.transform.position;
         }
     }
 }
