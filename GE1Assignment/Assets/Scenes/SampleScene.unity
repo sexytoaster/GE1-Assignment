@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.05239293, g: 0.050881594, b: 0.15202865, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0.000019999787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -853,6 +853,7 @@ MonoBehaviour:
   mainCamera: {fileID: 534669902}
   lastPosition: {x: 0, y: 0, z: 0}
   offsetVector: {x: 30, y: 0, z: 0}
+  band: 0
 --- !u!114 &1579683996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -868,8 +869,8 @@ MonoBehaviour:
   triangle: {fileID: 4057781373020743147, guid: ea66172dd7d91c44b988095b5663d103,
     type: 3}
   mainCamera: {fileID: 534669902}
-  lastPosition: {x: 0, y: 0, z: 0}
-  offsetVector: {x: 5, y: 0, z: 0}
+  offsetVector: {x: 3, y: 0, z: 0}
+  band: 0
 --- !u!1 &1714000482
 GameObject:
   m_ObjectHideFlags: 0

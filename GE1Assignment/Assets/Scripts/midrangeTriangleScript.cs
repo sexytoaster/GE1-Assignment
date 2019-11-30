@@ -6,9 +6,10 @@ public class midrangeTriangleScript : MonoBehaviour
 {
     public GameObject triangle;
     public GameObject mainCamera;
-    public Vector3 lastPosition = new Vector3(0, 0, 0);
+    public static Vector3 lastPosition = new Vector3(0, 0, 0);
     public Vector3 offsetVector = new Vector3(10, 0, 0);
-    float x;
+    public static float x;
+    public int band;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +20,18 @@ public class midrangeTriangleScript : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(mainCamera.transform.position, lastPosition);
-        if (distance < 5000)
+        if (distance < 20 + (1500 * AudioPeer.audioBandBuffer[band]))
         {
             x += 5;
             GameObject triangleInstance = GameObject.Instantiate(triangle, lastPosition + offsetVector, Quaternion.identity);
-            lastPosition = triangleInstance.transform.position;
             triangleInstance.transform.rotation = Quaternion.Euler(x, 0, 0);
+            lastPosition = triangleInstance.transform.position;
+            triangleInstance.transform.parent = gameObject.transform;
+        }
+       
+        if (lastPosition.x < Camera.main.transform.position.x)
+        {
+            lastPosition.x = Camera.main.transform.position.x;
         }
 
     }

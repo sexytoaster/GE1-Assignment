@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4538860453211845601}
   - component: {fileID: 4538860453211845602}
   - component: {fileID: 4538860453211845603}
-  - component: {fileID: 114592175227358752}
+  - component: {fileID: 114044821663477934}
   m_Layer: 0
   m_Name: ring
   m_TagString: Untagged
@@ -26497,7 +26497,7 @@ MonoBehaviour:
   startingScale: 3
   scaleMult: 5
   useBuffer: 1
---- !u!114 &114592175227358752
+--- !u!114 &114044821663477934
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26506,8 +26506,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4538860453211845604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b9f9c9d0cad3d74fa76907845a6dff2, type: 3}
+  m_Script: {fileID: 11500000, guid: 706730861a6db8042861d415b9af4477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 294890171100666165, guid: 962b8fe514013a343ad1e526bee4c9ea,
-    type: 3}
+  band: 3
+  distance: 0
