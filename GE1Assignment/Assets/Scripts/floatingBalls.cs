@@ -6,7 +6,6 @@ public class floatingBalls : MonoBehaviour
 {
     public float xOffset;
     public float zOffset;
-    public Transform cameraPosition;
     public int band;
     public float scaleMulti;
     // Start is called before the first frame update
@@ -26,7 +25,7 @@ public class floatingBalls : MonoBehaviour
         
             float y = (AudioPeer.audioBand[band] * scaleMulti);
             Vector3 pos = new Vector3(xOffset, y, zOffset);
-            transform.position = pos + cameraPosition.position;
+            transform.position = pos + Camera.main.transform.position;
        
     }
 }
