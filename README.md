@@ -17,4 +17,6 @@ through it but mine will differ in the shapes it is creating and how it visualis
 
 ## Some Inspiration
 ![Tame Impala Currents](/images/04192b63.jpg)
+This is the album art for Tame Impalas "Currents". It served as some inspiration for the aesthetic.
 ![Screenshot](/images/screenie.png)
+This is a screenshot of the project as it currently is. Looks even better in motion!
