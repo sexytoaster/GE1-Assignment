@@ -12,7 +12,7 @@ public class orbitOrbs : MonoBehaviour
     public float rotationSpeed;
     public bool rotateClockwise;
     public float scaleMulti;
-    float timer = 0;
+    float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class orbitOrbs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime * rotationSpeed;
+        speed += AudioPeer.audioBandBuffer[band] * rotationSpeed;
         Rotate();
 
     }
@@ -31,15 +31,15 @@ public class orbitOrbs : MonoBehaviour
     {
         if(rotateClockwise)
         {
-            float y = (-Mathf.Cos(timer) * yOrbit) + (AudioPeer.audioBandBuffer[band] * scaleMulti);
-            float z = Mathf.Sin(timer) * zOrbit; // + (AudioPeer.audioBandBuffer[band] * scaleMulti);
+            float y = (-Mathf.Cos(speed) * yOrbit) + (AudioPeer.audioBandBuffer[band] * scaleMulti);
+            float z = Mathf.Sin(speed) * zOrbit; // + (AudioPeer.audioBandBuffer[band] * scaleMulti);
             Vector3 pos = new Vector3(xOffset, y, z);
             transform.position = pos + cameraPosition.position;
         }
         else
         {
-            float y = Mathf.Cos(timer) * yOrbit + (AudioPeer.audioBandBuffer[band] * scaleMulti);
-            float z = Mathf.Sin(timer) * zOrbit; // + (AudioPeer.audioBandBuffer[band] * scaleMulti);
+            float y = Mathf.Cos(speed) * yOrbit + (AudioPeer.audioBandBuffer[band] * scaleMulti);
+            float z = Mathf.Sin(speed) * zOrbit; // + (AudioPeer.audioBandBuffer[band] * scaleMulti);
             Vector3 pos = new Vector3(xOffset, y, z);
             transform.position = pos + cameraPosition.position;
         }

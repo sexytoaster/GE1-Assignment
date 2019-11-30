@@ -20,7 +20,7 @@ public class midrangeTriangleScript : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(mainCamera.transform.position, lastPosition);
-        if (distance < 20 + (1500 * AudioPeer.audioBandBuffer[band]))
+        if (distance < 5 + (1500 * AudioPeer.audioBandBuffer[band]))
         {
             x += 5;
             GameObject triangleInstance = GameObject.Instantiate(triangle, lastPosition + offsetVector, Quaternion.identity);
