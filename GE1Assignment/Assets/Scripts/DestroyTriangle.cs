@@ -15,12 +15,19 @@ public class DestroyTriangle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (distance >= 5 + ( 1500 * AudioPeer.audioBandBuffer[band]))
+        if (distance >= 5 + ( 1000 * AudioPeer.audioBandBuffer[band]))
         {
             Destroy(gameObject);
-            midrangeTriangleScript.x -= 5;
-            
-            if(Vector3.Distance(Camera.main.transform.position, transform.position) < Vector3.Distance(Camera.main.transform.position, midrangeTriangleScript.lastPosition))
+            if (midrangeTriangleScript.direction == true)
+            {
+                midrangeTriangleScript.x -= 5;
+            }
+            if (midrangeTriangleScript.direction == false)
+            {
+                midrangeTriangleScript.x += 5;
+            }
+           
+            if (Vector3.Distance(Camera.main.transform.position, transform.position) < Vector3.Distance(Camera.main.transform.position, midrangeTriangleScript.lastPosition))
             {
                 midrangeTriangleScript.lastPosition = transform.position;
             }
