@@ -43,7 +43,7 @@ public class midrangeTriangleScript : MonoBehaviour
 
     IEnumerator ChangeDirection()
     {
-        if(AudioPeer.audioBandBuffer[band]< .05)
+        if(AudioPeer.audioBandBuffer[band]< .03)
         {
             direction = !direction;
             Debug.Log(direction);
