@@ -15,7 +15,7 @@ public class DestroyTriangle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (distance >= 5 + ( 1000 * AudioPeer.audioBandBuffer[band]))
+        if (.1 >= AudioPeer.audioBandBuffer[band])
         {
             Destroy(gameObject);
             if (midrangeTriangleScript.direction == true)
