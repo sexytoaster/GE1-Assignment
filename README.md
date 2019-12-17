@@ -38,8 +38,6 @@ I really like the aesthetic i achieved. It might not be for everyone but I wante
 
 ##
 
-## Instructions for building and running (if necessary)
+## Video of Assignment
 
-#
-
-## Include an embedded youtube video of the assignment in the readme.md and also submit the Youtube video link in the submission form. If you are on Windows 10 you can press Windows Key, Alt and R to take a video. This is how you can capture videos if you are on a Mac. Also you can use OBS.
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/mSEMEWo5zCM&feature=youtu.be/0.jpg)](http://www.youtube.com/watch?v=mSEMEWo5zCM&feature=youtu.be "GE1 Assignment")
