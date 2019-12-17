@@ -22,7 +22,7 @@ public class midrangeTriangleScript : MonoBehaviour
     {
         StartCoroutine("ChangeDirection");
         float distance = Vector3.Distance(mainCamera.transform.position, lastPosition);
-        if (distance < -15 + (1500 * AudioPeer.audioBandBuffer[band]))
+        if (distance < -90 + (1500 * AudioPeer.audioBandBuffer[band]))
         {
             if(direction == true)
             { x += 5; }
