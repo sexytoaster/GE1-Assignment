@@ -108,7 +108,7 @@ MonoBehaviour:
   xOffset: 25
   yOffset: -4
   band: 7
-  scaleMulti: 5
+  scaleMulti: 7
 --- !u!96 &6886370073152234860
 TrailRenderer:
   serializedVersion: 2
