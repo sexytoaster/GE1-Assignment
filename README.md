@@ -40,4 +40,4 @@ I really like the aesthetic i achieved. It might not be for everyone but I wante
 
 ## Video of Assignment
 
-[![Link to youtube](/images/thumbnail.jpg](http://www.youtube.com/watch?v=mSEMEWo5zCM&feature=youtu.be "GE1 Assignment")
+[![Link to youtube](/images/thumbnail.jpg)](http://www.youtube.com/watch?v=mSEMEWo5zCM&feature=youtu.be "GE1 Assignment")
