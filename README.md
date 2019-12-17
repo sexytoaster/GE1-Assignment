@@ -23,7 +23,7 @@ This is a screenshot of the project as it currently is. Looks even better in mot
 ![Screenshot](/images/screenie.png)
 ##
 
-## description of what the assignment does and how it works:
+## Description of what the assignment does and how it works:
 This program is a music visualizer made in Unity3D. What it does is spawns in rings and triangles that respond to the beat by getting bu=igger and smaller. They also respond to the different bands of the music by geting brighter and dimmer. For the triangles this lighting happens on band 3 and the rings on band 1. The skybox is the subbase, and is black when there is none and goes a lght shade of purple when there is subbase. I didnt want it to be too flashy and hard to look at so this skybox effect is subtle. It is an infinite tunnel so the camera moves through it also, and the triangles and rings behind the camera get deleted. The camera also moves based on sound. The length of the tunnel is dictated by the base, so it gets deleted and regrown so to speak when the base hits. It also changes its rotation direction whenever it is completely destroyed. At either side 2 spheres spawn in. These have had their colliders and mesh renderers disabled and are used so that trail rendereers can be attatched to them. These trails then show bands 4 and 5 in differentcolours that look quite good. I actually really liked the error texture when no terxture is attatched so one of the bands has a material closely matching this pink. I also added a sphere that tracks through the tunnel that switches direction of sway on the beat and visualises the 6th audio peer band to give the brilliance section a bit of love. All objects spawned become children of the visualizer game object.
 
 ## 
@@ -40,4 +40,4 @@ I really like the aesthetic i achieved. It might not be for everyone but I wante
 
 ## Video of Assignment
 
-[![GE1 Assignment demo](/images/thumbnail.png)](http://www.youtube.com/watch?v=mSEMEWo5zCM&feature=youtu.be "Assignment Video")
+[![GE1 Assignment demo](/images/thumbnail.jpg)](http://www.youtube.com/watch?v=mSEMEWo5zCM&feature=youtu.be "Assignment Video")
